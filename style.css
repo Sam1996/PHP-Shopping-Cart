@@ -1,0 +1,215 @@
+body{
+	background: #f7f7f7;
+}
+.item-title-large{
+	font-family: Bree serif;
+	color: #444;
+}
+.desc{
+	font-family: PT Sans;
+	font-size: 20px;
+	color:#666;
+}
+.navbar{
+	border-radius: 0px;
+	margin-bottom: 0;
+}
+.navbar-danger{
+	background: #f0a30a;
+}
+.navbar-brand{
+	color: #fff;
+}
+.navigation{
+	background: #fff;
+	border-top:1px solid #f0a30a;
+	border-left: 1px solid rgba(0,0,0,0.1);
+	border-right: 1px solid rgba(0,0,0,0.1);
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+.nav.navbar-nav li a{
+	color: #f0a30a;
+}
+.padding{
+	padding-top:18px;
+	padding-bottom: 18px;
+}
+.aside,.main{
+	padding-top:18px;
+	padding-bottom: 18px;
+	background: #fff;
+	border: 1px solid rgba(0,0,0,0.1);
+}
+.main{
+	padding-left: 0;
+	padding-right: 0;
+}
+.list-group{
+	background: transparent;
+}
+.list-group .list-group-item{
+	border: none;
+}
+.oldPrice{
+	text-decoration: line-through;
+	color: #d0d0d0;
+	font-size: 12px;
+}
+.new-price{
+	font-size: 20px;
+	color: #f0a30a;
+	font-weight: 700;
+}
+.small{
+	font-size: 18px !important;
+	color: #666;
+	line-height: 40px;
+}
+.itemImageContainer{
+	min-height: 250px;
+	max-height: 250px;
+}
+.productItem{
+	display: block;
+	padding: 8px;
+	border: 1px solid rgba(0,0,0,0.1);
+	min-height: 400px;
+	margin-bottom: 18px;
+}
+.anchor{
+	text-decoration: none;
+	color: #555;
+}
+.anchor:hover{
+	color: #f0a30a;
+	text-decoration: none;
+}
+.cart-button{
+	padding: 2px;
+}
+.text-warning{
+	color: #f0a30a !important;
+}
+.btn{
+	border-radius: 0px;
+}
+.banner{
+	padding-left: 35px;
+	height: 200px;
+	display: flex;
+	flex-direction:column;
+	align-items:flex-start;
+	justify-content:center;
+	background: url('images/shopping_banner.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.banner-title{
+	color: #fff;
+	text-shadow:2px 2px 4px rgba(0,0,0,0.45);
+	text-transform: uppercase;
+	font-family: "Montserrat",sans-serif;
+}
+.promo{
+	margin-top: 18px !important;
+}
+.promo-box .box-1,.promo-box .box-2{
+	background: #fff;
+	padding: 10px;
+	border:1px solid rgba(0,0,0,0.1);
+}
+.footer-container{
+	background-color: #FF8F00;
+}
+.footer{
+	padding-top:32px;
+	padding-bottom: 32px;
+	background: url('images/batthern.png');
+	background-repeat: repeat;
+}
+.bottom{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background: #d35400;
+}
+.main-wrap{
+	margin-bottom: 18px;
+}
+.white{
+	color: #fff;
+	margin: 0;
+}
+.item-image-large{
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	position: relative;
+	border: 1px solid #ddd;
+	height:456px;
+	margin-bottom: 18px;
+	overflow: hidden;
+}
+.item-image-large img{
+	transition: all 0.4s linear;
+}
+/*.item-image-large:hover img{
+	transform:scale(1.5);
+}*/
+#largeImage{
+	position: relative;
+
+}
+.item-image-small{
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	position: relative;
+	border: 1px solid #ddd;
+	min-height: 100px;
+	margin-bottom: 18px;
+}
+.action-btn-group{
+	margin-top:30px;
+	margin-bottom: 30px;
+}
+.price{
+	display: inline-block;
+	margin:10px 0;
+}
+.thisPrice{
+	line-height: 40px;
+	margin:0 15px;
+}
+#glass{
+	z-index:999;
+	display: inline-block;
+	position: absolute;
+	left: 90px;
+	width: 150px;
+	height: 180px;
+	border: 2px solid #666;
+	background-size: 550px 550px;
+	background-position: inherit;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	opacity: 0;
+	transition:all 0.4s linear;
+	cursor: crosshair;
+}
+.cart-item-image{
+	height: 65px;
+}
+.cart-items-count li{
+	background: #e67e22;
+	color: #fff !important;
+}
+.cart-items-count li a:hover{
+	background: #EF6C00 !important;
+}
+.cart-item{
+	color: #fff !important;
+}
+.cart-table{
+	transition:all 0.4s linear;
+}
