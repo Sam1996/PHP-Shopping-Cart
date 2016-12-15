@@ -11,6 +11,7 @@
 <script type="text/javascript">
 	
 	cart_count();
+
 	$("body").delegate("#addCartBtn","click",function(event){
 		var button = $(this).find("button[type='button']");
 		button.html = "Adding...";
@@ -83,6 +84,34 @@
 				$('.cart-table').html(data).fadeIn(3000);
 			}
 		})
+	}
+
+	function manageQty(thisQty){
+		var currentQty = thisQty.value;
+		var pid = $(thisQty).attr('pid');
+		var oldQty = $(thisQty).attr('oldQty');
+
+		if(currentQty >= oldQty){
+			$.ajax({
+				url : "increaseQty.php",
+				method : "POST",
+				data : {increaseQty : 1,ID : pid, old: oldQty, newQty: currentQty},
+				success : function(data){
+					alert('Product updated');
+				}
+			})
+		}
+
+		else if(currentQty <= oldQty){
+			$.ajax({
+				url : "decreaseQty.php",
+				method : "POST",
+				data : {increaseQty : 1,ID : pid, old: oldQty, newQty: currentQty},
+				success : function(data){
+					alert('Product updated');
+				}
+			})
+		}
 	}
 
 </script>
