@@ -34,6 +34,9 @@ body{
 	padding-top:18px;
 	padding-bottom: 18px;
 }
+.aside{
+	margin-bottom: 20px;
+}
 .aside,.main{
 	padding-top:18px;
 	padding-bottom: 18px;

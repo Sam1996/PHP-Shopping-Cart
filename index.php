@@ -21,29 +21,43 @@
 	<div class="row">
 		<div class="col-md-3 col-xs-12">
 				<div class="container-fluid  aside">
-					<h4 class="page-title">Brand</h4>
+					<h4 class="page-title">Sort by Brand</h4>
 					<ul class="list-group">
+						<li class="list-group-item"><a href="" id="selectBrand" data-brand="All">All</a></li>
 					<?php
 						$result = $db->query("SELECT brand FROM allproducts GROUP BY brand ORDER BY brand");
 						while($row = $result->fetch_assoc())
 						{
 					?>
-						<li class="list-group-item"><?php echo $row['brand'];?></li>
+						<li class="list-group-item"><a href="" id="selectBrand" data-brand="<?php echo $row['brand']; ?>"><?php echo $row['brand'];?></a></li>
 					<?php
 						}
 					?>
 					</ul>
 				</div>
+				<div class="container-fluid  aside">
+					<h4 class="page-title">Sort by Price</h4>
+					<ul class="list-group">
+						<li class="list-group-item">
+							<input type="radio" class="sortByPrice" name="sortByPrice" id="LowHigh" value="Low to high"></input>
+							<label for="sortByPrice">Low to High</label>
+						</li>
+						<li class="list-group-item">
+							<input type="radio" class="sortByPrice" name="sortByPrice" id="HighLow" value="High to low"></input>
+							<label for="sortByPrice">High to Low</label>
+						</li>
+					</ul>
+				</div>
 		</div>
 		<div class="col-md-9 col-xs-12">
 			<div class="message"></div>
-				<div class="container-fluid main">
+				<div class="container-fluid main" id="productList">
 					<?php 
 						$fetchAllData = $db->query("SELECT * FROM allproducts");
 						while($allDataRow = $fetchAllData->fetch_assoc()){
 					?>
 					<div class="col-md-4 col-xs-12 item-container">
-						<div class="productItem">
+						<div class="productItem" id="productItem">
 							<a class="anchor" href="item.php?page=item&action=view&id=<?php echo $allDataRow['productID'];?>">
 								<div class="itemImageContainer">
 									<img class="itemImage img-responsive" src="images/<?php echo $allDataRow['productName'];?>.png" ></img>

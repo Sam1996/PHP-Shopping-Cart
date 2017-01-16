@@ -85,5 +85,39 @@
 		})
 	}
 
+	$("body").delegate("#selectBrand","click",function(event){
+		event.preventDefault();
+		$('.productItem').fadeTo('slow',0.3);
+		var brand = $(this).attr('data-brand');
+
+		$.ajax({
+			url:"sortProductOnBrand.php",
+			method:"POST",
+			data:{sortProductOnBrand:1,brand:brand},
+			success : function(data){
+				//$('.productItem').fadeTo('slow',1,function(){
+					$('#productList').html(data);
+				//});
+			}
+		})
+	}) 
+
+	$(".sortByPrice").change(function() {
+	    if(this.checked) {
+	       var price = $(this).val();
+	       $('.productItem').fadeTo('slow',0.3);
+	       $.ajax({
+				url:"sortProductByPrice.php",
+				method:"POST",
+				data:{sortProductByPrice:1,price:price},
+				success : function(data){
+					//$('.productItem').fadeTo('slow',1,function(){
+						$('#productList').html(data);
+					//});
+				}
+			})
+	    }
+	});
+
 </script>
 </html>
