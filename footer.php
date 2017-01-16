@@ -86,7 +86,6 @@
 		})
 	}
 
-<<<<<<< HEAD
 	$("body").delegate("#selectBrand","click",function(event){
 		event.preventDefault();
 		$('.productItem').fadeTo('slow',0.3);
@@ -120,7 +119,6 @@
 			})
 	    }
 	});
-=======
 	function manageQty(thisQty){
 		var currentQty = thisQty.value;
 		var pid = $(thisQty).attr('pid');
@@ -148,7 +146,6 @@
 			})
 		}
 	}
->>>>>>> b860a251de4ce9c78cfea2f4010aeffde8ec2975
 
 </script>
 </html>
