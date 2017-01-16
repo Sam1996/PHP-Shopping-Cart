@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Dec 14, 2016 at 10:18 PM
+-- Generation Time: Dec 15, 2016 at 05:35 PM
 -- Server version: 5.5.24-log
 -- PHP Version: 5.3.13
 
@@ -62,6 +62,7 @@ CREATE TABLE IF NOT EXISTS `cart` (
   `productID` varchar(11) DEFAULT NULL,
   `productName` varchar(121) DEFAULT NULL,
   `productCategory` varchar(121) DEFAULT NULL,
+  `quantity` int(11) DEFAULT NULL,
   `productDescription` text,
   `brand` varchar(121) DEFAULT NULL,
   `costPrice` int(11) DEFAULT NULL,
@@ -72,10 +73,10 @@ CREATE TABLE IF NOT EXISTS `cart` (
 -- Dumping data for table `cart`
 --
 
-INSERT INTO `cart` (`productID`, `productName`, `productCategory`, `productDescription`, `brand`, `costPrice`, `sellingPrice`) VALUES
-('PA7237', 'Unicorn pastel pop platform sneakers', 'Platform Sneakers', 'Unicorn pastel pop platform sneakers', 'Unicorn', 2499, 1999),
-('OF5266', 'Columbus Running Sports Shoes', 'Running shoes', 'Columbus Running Sports Shoes Columbus Running Sports Shoes', 'Columbus', 999, 799),
-('PA7237', 'Unicorn pastel pop platform sneakers', 'Platform Sneakers', 'Unicorn pastel pop platform sneakers', 'Unicorn', 2499, 1999);
+INSERT INTO `cart` (`productID`, `productName`, `productCategory`, `quantity`, `productDescription`, `brand`, `costPrice`, `sellingPrice`) VALUES
+('OF5266', 'Columbus Running Sports Shoes', 'Running shoes', 2, 'Columbus Running Sports Shoes Columbus Running Sports Shoes', 'Columbus', 999, 799),
+('PA7237', 'Unicorn pastel pop platform sneakers', 'Platform Sneakers', 2, 'Unicorn pastel pop platform sneakers', 'Unicorn', 2499, 1999),
+('YF0675', 'Mizuno Wave Twister 4 Multi Color Badminton Sports Shoes', 'Sport shoe', 2, 'Mizuno Wave Twister 4 Multi Color Badminton Sports Shoes', 'Mizuno Wave', 2750, 2250);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

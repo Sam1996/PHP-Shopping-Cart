@@ -50,15 +50,12 @@ include('includes/db/db_config.php');
 						<?php 
 
 						$quantity = $db->query(" SELECT * FROM cart WHERE productID = '$ID' ");
-						$qty = $quantity->num_rows;
-
-						echo $qty;
-
+						//$qty = $quantity->num_rows;
 						?>
-
+						<input type="number" class="form-control" name="qty" id="cart-quantity" value="<?php echo $row['quantity'];?>" oldQty="<?php echo $row['quantity'];?>" pid="<?php echo $ID;?>" onChange="manageQty(this)">
 					</td>
-					<td>&#8377; <?php echo $row['sellingPrice'] * $qty; ?></td>
-					<td>
+					<td>&#8377; <?php echo $row['sellingPrice'] * $row['quantity']; ?></td>
+						<td>
 						<a href="" id="removeBtn" pid="<?php echo $row['productID'];?>">Remove</a>
 						<!--<a href="checkout.php?page=checkout&action=checkout&id=<?php echo $row['productID'] ?>">Checkout</a>-->
 						<!--<a href="mycart.php?page=mycart&action=remove&id=<?php echo $row['productID'] ?>">Remove</a>-->
@@ -125,6 +122,11 @@ include('includes/db/db_config.php');
 				<?php
 					}
 ?>
-
+<style type="text/css">
+#cart-quantity{
+	max-width: 60px !important;
+	max-width: 90px !important;
+}
+</style>
 
 			
